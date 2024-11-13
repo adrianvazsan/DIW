@@ -1,0 +1,148 @@
+body{
+  margin: 0;
+}
+.icono{
+    position: absolute;
+    right: 8px;
+    display: inline-block;
+
+}
+.icono:hover{
+  transform: translateY(-10px);
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+ }
+ .controles{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 8px;
+ }
+ .controlAudio{
+    opacity: 0.6;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 2px;
+    left: 600px;
+ }
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ .hero-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  z-index: 1; 
+}
+ 
+ .content-hero {
+   width: 100%;
+   height: 100%;
+   z-index: 99;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ h1 {
+   font-family: "Bebas Neue", cursive;
+   font-size: 3.6rem;
+   color: #ffffff;
+   opacity: 90%;
+   z-index: 99;
+ }
+ 
+
+ 
+ .animate-text {
+   font-family: "Inconsolata", monospace;
+   font-size: 1.4rem;
+   letter-spacing: 0.075rem;
+   text-align: center;
+ }
+ 
+ /*Para simular el cursor del teclado usamos la siguiente pseudoclase con una animación que pueden ver en la parte final del código CSS*/
+ .animate-text::after {
+   content: "|";
+   font-size: 1.6rem;
+   font-family: "Inconsolata", monospace;
+   animation-name: parpadeo;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+ }
+ 
+ .link-to-oficial-page {
+   position: absolute;
+   padding: 30px;
+   bottom: 0;
+   font-family: "Inconsolata", monospace;
+   text-decoration: none;
+   color: #ffffff;
+   font-weight: bold;
+ }
+ 
+ .link-to-oficial-page:hover {
+   text-decoration: underline;
+ }
+ 
+ /*Esta animación imita el parpadeo del cursor del teclado*/
+ @keyframes parpadeo {
+   0% {
+     opacity: 1;
+   }
+   20% {
+     opacity: 1;
+   }
+   25% {
+     opacity: 0;
+   }
+   90% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+ 
+ /*Esta animación crea un zoom con la imagen de fondo del hero*/
+ @keyframes zoom {
+   0% {
+     opacity: 0;
+     transform: scale(1.1);
+   }
+   8% {
+     opacity: 1;
+   }
+   60% {
+     opacity: 1;
+   }
+   70% {
+     opacity: 1;
+     transform: scale(1);
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+ 
