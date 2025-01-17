@@ -1,0 +1,55 @@
+header{
+    background-color: rgb(177, 236, 236);
+}
+body{
+    background-color: rgb(228, 247, 248);
+}
+
+.progress-bar{
+    position: fixed;
+    width: 100%;
+    height: 10px;
+    z-index: 2000;
+}
+.progress{
+    width: 0%;
+    height: 100%;
+    background-color: rgb(23, 165, 129);
+}
+h1 {
+    font-size: 34px; /* Tamaño de fuente por defecto para el encabezado */
+}
+.micro{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.chat-button{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    background: url("https://img.icons8.com/ios/50/circled-chevron-up.png");
+    background-color: rgb(65, 166, 225);
+    box-shadow: 0px 3px 12px black;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+#botonArriba{
+    right: -100px;
+}
+
+img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+img:hover{
+    cursor: pointer;
+}
+.card{
+    transition: background-color 0.5s ease
+}
