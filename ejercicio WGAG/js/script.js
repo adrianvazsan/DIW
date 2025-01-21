@@ -78,7 +78,7 @@
       button.addEventListener("click", () => addMessage());
 
 
-    let clickCounter = 0;s
+    let clickCounter = 0;
 
     function btnClickCount() {
         clickCounter++;
@@ -91,3 +91,17 @@
         icono.classList.toggle("active");
         document.body.classList.toggle("");
     });
+    function saludar() {
+        const h2 = document.getElementById('saludo');
+        const hora = new Date().getHours();
+
+        if (hora < 12) {
+            h2.textContent = '¡Buenos días!';
+        } else if (hora < 18) {
+            h2.textContent = '¡Buenas tardes!';
+        } else {
+            h2.textContent = '¡Buenas noches!';
+        }
+    }
+    window.onload = saludar;
+
