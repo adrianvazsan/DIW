@@ -41,7 +41,7 @@
     }
 
 
-    let tamañoIncrementado = false; // Variable para verificar si el tamaño ha sido incrementado
+    let tamañoIncrementado = false;
 
     document.getElementById('imagenTamaño').addEventListener('click', () => {
         const body = document.body;
@@ -49,24 +49,24 @@
         const header = document.querySelector('h1');
 
         if (!tamañoIncrementado) {
-            // Obtener el tamaño actual y aumentar 10px
+         
             const tamañoActual = parseFloat(window.getComputedStyle(body).fontSize);
-            const nuevoTamaño = tamañoActual + 10; // Aumentar 10px
+            const nuevoTamaño = tamañoActual + 10;
             const nuevoTamañobutton = tamañoActual + 50;
             const nuevoTamañoheader = tamañoActual + 30;
 
-            // Aplicar el nuevo tamaño
+
             body.style.fontSize = `${nuevoTamaño}px`;
             button.style.fontSize = `${nuevoTamañobutton}px`;
             header.style.fontSize = `${nuevoTamañoheader}px`;
         } else {
-            // Volver al tamaño original
-            body.style.fontSize = ''; // Restablecer a tamaño por defecto
-            button.style.fontSize = ''; // Restablecer a tamaño por defecto
-            header.style.fontSize = ''; // Restablecer a tamaño por defecto
+          
+            body.style.fontSize = '';
+            button.style.fontSize = ''; 
+            header.style.fontSize = ''; 
         }
 
-        tamañoIncrementado = !tamañoIncrementado; // Alternar el estado
+        tamañoIncrementado = !tamañoIncrementado; 
     });
 
     const addMessage = () => {
@@ -76,3 +76,18 @@
       
       const button = document.querySelector(".tts");
       button.addEventListener("click", () => addMessage());
+
+
+    let clickCounter = 0;s
+
+    function btnClickCount() {
+        clickCounter++;
+        document.getElementById("clickCount").textContent = "Numero de click: " + clickCounter;
+    }
+
+    const icono = document.querySelector(".icono");
+
+    icono.addEventListener("click", e => {
+        icono.classList.toggle("active");
+        document.body.classList.toggle("");
+    });
