@@ -1,33 +1,38 @@
-header{
+header {
     background-color: rgb(177, 236, 236);
 }
-body{
+
+body {
     background-color: rgb(228, 247, 248);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.progress-bar{
+.progress-bar {
     position: fixed;
     width: 100%;
     height: 10px;
     z-index: 2000;
 }
-.progress{
+
+.progress {
     width: 0%;
     height: 100%;
     background-color: rgb(23, 165, 129);
 }
+
 h1 {
-    font-size: 34px; /* Tamaño de fuente por defecto para el encabezado */
+    font-size: 34px;
 }
-.micro{
+
+.micro {
     width: 35px;
     height: 35px;
     object-fit: cover;
 }
-.chat-button{
+
+.chat-button {
     height: 60px;
     width: 60px;
     border-radius: 60px;
@@ -41,23 +46,54 @@ h1 {
     bottom: 30px;
     right: 30px;
 }
-#botonArriba{
+
+#botonArriba {
     right: -100px;
 }
 
-img{
+img {
     width: 60px;
     height: 60px;
     object-fit: cover;
 }
-img:hover{
+
+img:hover {
     cursor: pointer;
 }
-.card{
-    transition: background-color 0.5s ease
+
+.card {
+    transition: background-color 0.5s ease;
 }
-footer{
+
+footer {
     padding: 1em 0;
     margin-top: auto;
     background-color: rgb(177, 236, 236);
+}
+
+body.modo-oscuro {
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+header.modo-oscuro {
+    background-color: rgb(50, 50, 50);
+}
+
+.progress {
+    background-color: rgb(23, 165, 129);
+}
+
+.card.modo-oscuro {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+footer.modo-oscuro {
+    background-color: rgb(50, 50, 50);
+}
+
+
+.chat-button.modo-oscuro {
+    background-color: rgb(65, 166, 225);
 }
